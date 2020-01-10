@@ -42,7 +42,11 @@
                         </span>
                       </label>
                       <label class="field a-field a-field_a1">
-                        <input class="field__input a-field__input" id="input_sexe" placeholder="Civilité">
+                        <select id="input_sexe" class="field__input a-field__input">
+                          <option value="">--Civilité--</option>
+                          <option value="M">Masculin</option>
+                          <option value="F">Feminin</option>
+                        </select>
                         <span class="a-field__label-wrap">
                           <span class="a-field__label">Civilité</span>
                         </span>
@@ -98,7 +102,9 @@
 </body>
 <script>
 
-      window.onload = function(){
+      window.onload = loadData();
+      
+      function loadData(){
 
       var request = new XMLHttpRequest();
       request.onreadystatechange = function () {
@@ -188,7 +194,8 @@
 
       xhttpUpdate.onreadystatechange = function () {
         if (xhttpUpdate.readyState == 4) {
-          document.location.reload(true);
+          loadData();
+          // document.location.reload(true);
         };
       };
       xhttpUpdate.open("PUT", "http://localhost:3000/client/"+id, false);
