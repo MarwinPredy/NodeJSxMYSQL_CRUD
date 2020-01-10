@@ -1,0 +1,279 @@
+body {
+    padding: 20px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  }
+  
+  .container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+  
+  .UpperPart{
+    display: flex;
+    flex-direction: row;
+    height: 75vh;
+    width: 100%;
+  }
+  
+  .UpperPart .LeftPart{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+  }
+  
+  .UpperPart .LeftPart .TitleContainer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .UpperPart .LeftPart .TitleContainer h2{
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-family: 'Fira Sans Condensed', sans-serif;
+  }
+  
+  .UpperPart .LeftPart .TitleContainer img{
+    border: 2px solid #044BD9;
+    border-radius: 50%;
+    padding: 5px;
+    margin-right: 20px;
+  }
+  
+  
+  .UpperPart .LeftPart form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+  }
+  
+  .field{
+    --uiFieldPlaceholderColor: var(--fieldPlaceholderColor, #767676);
+  }
+  
+  .field__input{ 
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
+  
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  
+    font-family: inherit;
+    font-size: 1em;
+  }
+  
+  .field__input:focus::-webkit-input-placeholder{
+    color: var(--uiFieldPlaceholderColor);
+  }
+  
+  .field__input:focus::-moz-placeholder{
+    color: var(--uiFieldPlaceholderColor);
+    opacity: 1;
+  }
+  
+  .a-field{
+    display: inline-block;
+  }
+  
+  .a-field__input{ 
+    display: block;
+    box-sizing: border-box;
+    width: 80%;
+  }
+  
+  .a-field__input:focus{
+    outline: none;
+  }
+  
+  .a-field{
+    --uiFieldHeight: var(--fieldHeight, 40px);  
+    --uiFieldBorderWidth: var(--fieldBorderWidth, 2px);
+    --uiFieldBorderColor: var(--fieldBorderColor);
+  
+    --uiFieldFontSize: var(--fieldFontSize, 1em);
+    --uiFieldHintFontSize: var(--fieldHintFontSize, 1em);
+  
+    --uiFieldPaddingRight: var(--fieldPaddingRight, 15px);
+    --uiFieldPaddingBottom: var(--fieldPaddingBottom, 15px);
+    --uiFieldPaddingLeft: var(--fieldPaddingLeft, 15px);   
+  
+    position: relative;
+    box-sizing: border-box;
+    font-size: var(--uiFieldFontSize);
+    padding-top: 1em;  
+  }
+  
+  .a-field__input{
+    height: var(--uiFieldHeight);
+    padding: 0 var(--uiFieldPaddingRight) 0 var(--uiFieldPaddingLeft);
+    border-bottom: var(--uiFieldBorderWidth) solid var(--uiFieldBorderColor);  
+  }
+  
+  .a-field__input::-webkit-input-placeholder{
+    opacity: 0;
+    transition: opacity .2s ease-out;
+  }
+  
+  .a-field__input::-moz-placeholder{
+    opacity: 0;
+    transition: opacity .2s ease-out;
+  }
+  
+  .a-field__input:not(:placeholder-shown) ~ .a-field__label-wrap .a-field__label{
+    opacity: 0;
+    bottom: var(--uiFieldPaddingBottom);
+  }
+  
+  .a-field__input:focus::-webkit-input-placeholder{
+    opacity: 1;
+    transition-delay: .2s;
+  }
+  
+  .a-field__input:focus::-moz-placeholder{
+    opacity: 1;
+    transition-delay: .2s;
+  }
+  
+  .a-field__label-wrap{
+    box-sizing: border-box;
+    width: 100%;
+    height: var(--uiFieldHeight);	
+  
+    pointer-events: none;
+    cursor: text;
+  
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .a-field__label{
+    position: absolute;
+    left: var(--uiFieldPaddingLeft);
+    bottom: calc(50% - .5em);
+  
+    line-height: 1;
+    font-size: var(--uiFieldHintFontSize);
+  
+    pointer-events: none;
+    transition: bottom .2s cubic-bezier(0.9,-0.15, 0.1, 1.15), opacity .2s ease-out;
+    will-change: bottom, opacity;
+  }
+  
+  .a-field__input:focus ~ .a-field__label-wrap .a-field__label{
+    opacity: 1;
+    bottom: var(--uiFieldHeight);
+  }
+  
+  .a-field_a1 .a-field__input{
+    transition: border-color .2s ease-out;
+    will-change: border-color;
+  }
+  
+  .a-field_a1 .a-field__input:focus{
+    border-color: var(--fieldBorderColorActive);
+  }
+  
+  .field{
+    --fieldBorderColor: #D1C4E9;
+    --fieldBorderColorActive: #044BD9;
+  }
+  
+  .UpperPart .LeftPart form .buttonContainer{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 10px;
+  }
+
+  .UpperPart .LeftPart form button{
+    width: 25%;
+    height: 35px;
+    background: none;
+    border: 2px solid #044BD9;
+    opacity: 0.8;
+    border-radius: 1.3rem;
+    color: #044BD9;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  
+  .UpperPart .RightPart{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+  }
+  
+  .UpperPart .RightPart .TitleContainer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .UpperPart .RightPart .TitleContainer h2{
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-family: 'Fira Sans Condensed', sans-serif;
+  }
+  
+  .UpperPart .RightPart .TitleContainer img{
+    border: 2px solid #044BD9;
+    border-radius: 50%;
+    padding: 5px;
+    margin-right: 20px;
+  }
+  
+  .UpperPart .RightPart .TabClient{
+    height: 400px;
+    overflow: auto;
+  }
+
+  .UpperPart .RightPart .TabClient table .clientRow{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .BottomPart{
+    width: 100%;
+    height: 50vh;
+  }
+  
+  .BottomPart .TitleContainer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .BottomPart .TitleContainer h2{
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-family: 'Fira Sans Condensed', sans-serif;
+  }
+  
+  .BottomPart .TitleContainer img{
+    border: 2px solid #044BD9;
+    border-radius: 50%;
+    padding: 5px;
+    margin-right: 20px;
+  }
+  
+  .BottomPart .TabCommande #tabCommande .commandeRow{
+    display: flex;
+    flex-direction: column;
+  }
+  
