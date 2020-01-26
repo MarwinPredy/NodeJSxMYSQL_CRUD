@@ -1,218 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>FrontBidon</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="container">
-        <div class="UpperPart">
-            <div class="LeftPart">
-                <div class="TitleContainer">
-                    <img src="images/user.png" alt="">
-                    <h2>Informations</h2>
-                </div>
-                <form action="">
-                    <label class="field a-field a-field_a1">
-                        <input class="field__input a-field__input" id="input_nom" placeholder="nom">
-                        <span class="a-field__label-wrap">
-                          <span class="a-field__label">Nom</span>
-                        </span>
-                        <input class="field__input a-field__input" id="input_id" type="hidden" placeholder="nom">
-                      </label>
-                      <label class="field a-field a-field_a1">
-                        <input class="field__input a-field__input" id="input_prenom" placeholder="prenom">
-                        <span class="a-field__label-wrap">
-                          <span class="a-field__label">Prenom</span>
-                        </span>
-                      </label>    
-                      <label class="field a-field a-field_a1">
-                        <input class="field__input a-field__input" id="input_adresse" placeholder="adresse">
-                        <span class="a-field__label-wrap">
-                          <span class="a-field__label">Adresse</span>
-                        </span>
-                      </label>
-                      <label class="field a-field a-field_a1">
-                        <input class="field__input a-field__input" id="input_date" placeholder="date de naissance">
-                        <span class="a-field__label-wrap">
-                          <span class="a-field__label">Date de naissance</span>
-                        </span>
-                      </label>
-                      <label class="field a-field a-field_a1">
-                        <select id="input_sexe" class="field__input a-field__input">
-                          <option value="">--Civilité--</option>
-                          <option value="M">Masculin</option>
-                          <option value="F">Feminin</option>
-                        </select>
-                        <span class="a-field__label-wrap">
-                          <span class="a-field__label">Civilité</span>
-                        </span>
-                      </label>
-                      <div class="buttonContainer">
-                        <button id="updateclient">Update</button>
-                        <button id="deleteclient">Delete</button>
-                      </div>
-                </form>
+      <div class="UpperPart">
+        <div class="LeftPart">
+          <div class="TitleContainer">
+            <img src="images/user.png" alt="" />
+            <h2>Informations</h2>
+          </div>
+          <form action="">
+            <label class="field a-field a-field_a1">
+              <input
+                class="field__input a-field__input"
+                id="input_nom"
+                placeholder="nom"
+              />
+              <span class="a-field__label-wrap">
+                <span class="a-field__label">Nom</span>
+              </span>
+              <input
+                class="field__input a-field__input"
+                id="input_id"
+                type="hidden"
+                placeholder="nom"
+              />
+            </label>
+            <label class="field a-field a-field_a1">
+              <input
+                class="field__input a-field__input"
+                id="input_prenom"
+                placeholder="prenom"
+              />
+              <span class="a-field__label-wrap">
+                <span class="a-field__label">Prenom</span>
+              </span>
+            </label>
+            <label class="field a-field a-field_a1">
+              <input
+                class="field__input a-field__input"
+                id="input_adresse"
+                placeholder="adresse"
+              />
+              <span class="a-field__label-wrap">
+                <span class="a-field__label">Adresse</span>
+              </span>
+            </label>
+            <label class="field a-field a-field_a1">
+              <input
+                class="field__input a-field__input"
+                id="input_date"
+                placeholder="date de naissance"
+              />
+              <span class="a-field__label-wrap">
+                <span class="a-field__label">Date de naissance</span>
+              </span>
+            </label>
+            <label class="field a-field a-field_a1">
+              <select id="input_sexe" class="field__input a-field__input">
+                <option value="">--Civilité--</option>
+                <option value="M">Masculin</option>
+                <option value="F">Feminin</option>
+              </select>
+              <span class="a-field__label-wrap">
+                <span class="a-field__label">Civilité</span>
+              </span>
+            </label>
+            <div class="buttonContainer">
+              <button id="updateclient">Update</button>
+              <button id="deleteclient">Delete</button>
             </div>
-            <div class="RightPart">
-                <div class="TitleContainer">
-                    <img src="images/users.png" alt="">
-                    <h2>Clients</h2>
-                </div>
-                <div class="TabClient">
-                    <table id='tableClient'>
-                        <thead>
-                          <tr>
-                            <th>Prenom</th>
-                            <th>Nom</th>
-                            <th>Adresse</th>
-                            <th>Date de naissance</th>
-                            <th>Civilité</th>
-                          </tr>
-                        </thead>
-                        <tbody id=clientRow>
-                        </tbody>
-                      </table>
-                </div>
-            </div>
+          </form>
         </div>
-        <div class="BottomPart">
-            <div class="TitleContainer">
-                <img src="images/shop.png" alt="">
-                <h2>Commandes</h2>
-            </div>
-            <table style="width:100%;">
+        <div class="RightPart">
+          <div class="TitleContainer">
+            <img src="images/users.png" alt="" />
+            <h2>Clients</h2>
+          </div>
+          <div class="TabClient">
+            <table id="tableClient">
               <thead>
                 <tr>
-                  <th>Produit</th>
-                  <th>Reference</th>
-                  <th>Date de commande</th>
-                  <th>Quantité</th>
-                  <th>Prix</th>
+                  <th>Prenom</th>
+                  <th>Nom</th>
+                  <th>Adresse</th>
+                  <th>Date de naissance</th>
+                  <th>Civilité</th>
                 </tr>
               </thead>
-              <tbody id=commandeRow>
-              </tbody>
+              <tbody id="clientRow"></tbody>
             </table>
+          </div>
         </div>
+      </div>
+      <div class="BottomPart">
+        <div class="TitleContainer">
+          <img src="images/shop.png" alt="" />
+          <h2>Commandes</h2>
+        </div>
+        <table style="width:100%;">
+          <thead>
+            <tr>
+              <th>Produit</th>
+              <th>Reference</th>
+              <th>Date de commande</th>
+              <th>Quantité</th>
+              <th>Prix</th>
+            </tr>
+          </thead>
+          <tbody id="commandeRow"></tbody>
+        </table>
+      </div>
     </div>
-</body>
-<script>
+  </body>
+  <script>
+    window.onload = loadData();
 
-      window.onload = loadData();
-      
-      function loadData(){
-
+    function loadData() {
       var request = new XMLHttpRequest();
-      request.onreadystatechange = function () {
+      request.onreadystatechange = function() {
         if (request.readyState == 4) {
-        var clients = JSON.parse(request.responseText);
-         document.getElementById("clientRow").innerHTML = "";
-        for(var i=0;i<clients.length;i++){
+          var clients = JSON.parse(request.responseText);
+          document.getElementById("clientRow").innerHTML = "";
+          for (var i = 0; i < clients.length; i++) {
             client = clients[i];
             var sexe = client.civilite != null ? client.civilite : " ";
             var adresse = client.adresse != null ? client.adresse : " ";
             var date = new Date(client.date_naissance);
-            var val = date.getFullYear() + '-' + (((date.getMonth() + 1) < 10) ? '0' : '') + (date.getMonth() + 1) + '-' + (((date.getDate() + 1) < 10) ? '0' : '') + date.getDate();
-            document.getElementById("clientRow").innerHTML += '<tr class="clientinfo" data-id="'+client.id_client+'"><th>' + client.prenom +'</th><th>'+ client.nom +'</th><th>'+ adresse +'</th><th>'+ val +'</th><th> '+ sexe + '</th></tr>';
+            var val =
+              date.getFullYear() +
+              "-" +
+              (date.getMonth() + 1 < 10 ? "0" : "") +
+              (date.getMonth() + 1) +
+              "-" +
+              (date.getDate() + 1 < 10 ? "0" : "") +
+              date.getDate();
+            document.getElementById("clientRow").innerHTML +=
+              '<tr class="clientinfo" data-id="' +
+              client.id_client +
+              '"><th>' +
+              client.prenom +
+              "</th><th>" +
+              client.nom +
+              "</th><th>" +
+              adresse +
+              "</th><th>" +
+              val +
+              "</th><th> " +
+              sexe +
+              "</th></tr>";
           }
 
-          var infos = document.getElementsByClassName('clientinfo');
+          var infos = document.getElementsByClassName("clientinfo");
 
-          for(var i = 0; i < infos.length; i++){
-              infos[i].addEventListener('click', function(){
-                    document.getElementById("input_id").value = this.dataset.id
-                    document.getElementById("input_nom").value = this.children[0].innerText
-                    document.getElementById("input_prenom").value = this.children[1].innerText
-                    document.getElementById("input_adresse").value = this.children[2].innerText
-                    document.getElementById("input_date").value = this.children[3].innerText
-                    document.getElementById("input_sexe").value = this.children[4].innerText
-                    var cmds = document.getElementsByClassName('commandeinfo');
-                    for(var k = 0; k < cmds.length; k++){
-                      if(cmds[k].dataset.id === document.getElementById("input_id").value){
-                        cmds[k].style.display = 'table-row';
-                      }else{
-                        cmds[k].style.display = 'none';
-                      }
-                    }
-              }, false);
+          for (var i = 0; i < infos.length; i++) {
+            infos[i].addEventListener(
+              "click",
+              function() {
+                document.getElementById("input_id").value = this.dataset.id;
+                document.getElementById(
+                  "input_nom"
+                ).value = this.children[0].innerText;
+                document.getElementById(
+                  "input_prenom"
+                ).value = this.children[1].innerText;
+                document.getElementById(
+                  "input_adresse"
+                ).value = this.children[2].innerText;
+                document.getElementById(
+                  "input_date"
+                ).value = this.children[3].innerText;
+                document.getElementById(
+                  "input_sexe"
+                ).value = this.children[4].innerText;
+                var cmds = document.getElementsByClassName("commandeinfo");
+                for (var k = 0; k < cmds.length; k++) {
+                  if (
+                    cmds[k].dataset.id ===
+                    document.getElementById("input_id").value
+                  ) {
+                    cmds[k].style.display = "table-row";
+                  } else {
+                    cmds[k].style.display = "none";
+                  }
+                }
+              },
+              false
+            );
           }
 
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function () {
-        if (xhttp.readyState == 4) {
-        var commandes = JSON.parse(xhttp.responseText);
-        document.getElementById("commandeRow").innerHTML = "";
-        for(var i=0;i<commandes.length;i++){
-            commande = commandes[i];
-            var prix = commande.quantite * commande.prix_unitaire;
-            var dateCo = new Date(commande.date_commande);
-            var valCo = dateCo.getFullYear() + '-' + (((dateCo.getMonth() + 1) < 10) ? '0' : '') + (dateCo.getMonth() + 1) + '-' + (((dateCo.getDate() + 1) < 10) ? '0' : '') + dateCo.getDate();
-            document.getElementById("commandeRow").innerHTML += '<tr class="commandeinfo" style="display: none;" data-id="'+commande.id_client+'"><th>' + commande.libelle +'</th><th>'+ commande.reference +'</th><th>'+ valCo +'</th><th>'+ commande.quantite +'</th><th> '+ prix + '</th></tr>';
-          }
+          var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (xhttp.readyState == 4) {
+              var commandes = JSON.parse(xhttp.responseText);
+              document.getElementById("commandeRow").innerHTML = "";
+              for (var i = 0; i < commandes.length; i++) {
+                commande = commandes[i];
+                var prix = commande.quantite * commande.prix_unitaire;
+                var dateCo = new Date(commande.date_commande);
+                var valCo =
+                  dateCo.getFullYear() +
+                  "-" +
+                  (dateCo.getMonth() + 1 < 10 ? "0" : "") +
+                  (dateCo.getMonth() + 1) +
+                  "-" +
+                  (dateCo.getDate() + 1 < 10 ? "0" : "") +
+                  dateCo.getDate();
+                document.getElementById("commandeRow").innerHTML +=
+                  '<tr class="commandeinfo" style="display: none;" data-id="' +
+                  commande.id_client +
+                  '"><th>' +
+                  commande.libelle +
+                  "</th><th>" +
+                  commande.reference +
+                  "</th><th>" +
+                  valCo +
+                  "</th><th>" +
+                  commande.quantite +
+                  "</th><th> " +
+                  prix +
+                  "</th></tr>";
+              }
+            }
+          };
+          xhttp.open("GET", "http://localhost:3000/commande", false);
+          xhttp.send();
         }
       };
-        xhttp.open("GET", "http://localhost:3000/commande", false);
-        xhttp.send(); 
-        }
-      };
-    request.open("GET", "http://localhost:3000/client", false);
-    request.send();
+      request.open("GET", "http://localhost:3000/client", false);
+      request.send();
     }
 
-    document.getElementById('updateclient').addEventListener('click', function(e) {
-      e.preventDefault();
-      UpdateClient(
-        document.getElementById('input_nom').value,
-        document.getElementById('input_prenom').value,
-        document.getElementById('input_adresse').value,
-        document.getElementById('input_date').value,
-        document.getElementById('input_sexe').value,
-        document.getElementById('input_id').value
-      )
-    });
+    document
+      .getElementById("updateclient")
+      .addEventListener("click", function(e) {
+        e.preventDefault();
+        UpdateClient(
+          document.getElementById("input_nom").value,
+          document.getElementById("input_prenom").value,
+          document.getElementById("input_adresse").value,
+          document.getElementById("input_date").value,
+          document.getElementById("input_sexe").value,
+          document.getElementById("input_id").value
+        );
+      });
 
-    document.getElementById('deleteclient').addEventListener('click', function(e) {
-      e.preventDefault();
-      DeleteClient(
-        document.getElementById('input_id').value
-      )
-    });
+    document
+      .getElementById("deleteclient")
+      .addEventListener("click", function(e) {
+        e.preventDefault();
+        DeleteClient(document.getElementById("input_id").value);
+      });
 
-    function UpdateClient(nom, prenom, adresse, date_naissance, civilite, id){
+    function UpdateClient(nom, prenom, adresse, date_naissance, civilite, id) {
       var xhttpUpdate = new XMLHttpRequest();
       var data = {};
       data.nom = nom;
-      data.prenom  = prenom;
+      data.prenom = prenom;
       data.adresse = adresse;
       data.date_naissance = date_naissance;
       data.civilite = civilite;
       var json = JSON.stringify(data);
 
-      xhttpUpdate.onreadystatechange = function () {
+      xhttpUpdate.onreadystatechange = function() {
         if (xhttpUpdate.readyState == 4) {
           loadData();
           // document.location.reload(true);
-        };
+        }
       };
-      xhttpUpdate.open("PUT", "http://localhost:3000/client/"+id, false);
-      xhttpUpdate.setRequestHeader('Content-type','application/json; charset=utf-8');
+      xhttpUpdate.open("PUT", "http://localhost:3000/client/" + id, false);
+      xhttpUpdate.setRequestHeader(
+        "Content-type",
+        "application/json; charset=utf-8"
+      );
       xhttpUpdate.send(json);
-    };
+    }
 
-    function DeleteClient(id){
+    function DeleteClient(id) {
       var xhttpDelete = new XMLHttpRequest();
-      xhttpDelete.onreadystatechange = function () {
+      xhttpDelete.onreadystatechange = function() {
         if (xhttpDelete.readyState == 4) {
           document.location.reload(true);
-        };
+        }
       };
-      xhttpDelete.open("DELETE", "http://localhost:3000/client/"+id, false);
-      xhttpDelete.setRequestHeader('Content-type','application/json; charset=utf-8');
+      xhttpDelete.open("DELETE", "http://localhost:3000/client/" + id, false);
+      xhttpDelete.setRequestHeader(
+        "Content-type",
+        "application/json; charset=utf-8"
+      );
       xhttpDelete.send();
-    };
-</script>
+    }
+  </script>
 </html>

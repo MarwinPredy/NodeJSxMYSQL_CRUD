@@ -18,8 +18,6 @@ Client.getAllClient = function (result) {
                     result(null, err);
                 }
                 else{
-                  // console.log('client : ', res);  
-
                  result(null, res);
                 }
             });   

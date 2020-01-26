@@ -1,7 +1,7 @@
-module.exports = function(app) {
+module.exports = (app)=> {
     var controller = require('../controller/appController');
 
-    app.use(function(req, res, next) {
+    app.use((req, res, next)=> {
       res.header("Access-Control-Allow-Origin", "*"); 
       res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
       next();
@@ -13,10 +13,14 @@ module.exports = function(app) {
      
     app.route('/client/:clientId')
       .put(controller.update_a_client)
-      .delete(controller.delete_a_client);
+      .delete(controller.delete_a_client)
 
     //Commandes routes
     app.route('/commande')
       .get(controller.list_all_commande)
+
+    //Auth route
+    app.route("/auth").post(controller.auth);
+
 };
 
