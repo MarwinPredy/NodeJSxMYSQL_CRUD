@@ -9,8 +9,6 @@ exports.list_all_client = function (req, res) {
     throw new Error("Unauthenticated!");
   }
   Client.getAllClient(function (err, client) {
-
-    console.log('controller')
     if (err)
       res.send(err);
     res.send(client);
@@ -62,7 +60,6 @@ exports.auth = ({
       res.send(err)
     } else if (user === 'error') {
       res.status(400).send(user);
-      console.log(user)
     };
     if (user.password === body.password) {
       const token = jwt.sign({
